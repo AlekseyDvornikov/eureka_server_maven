@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: eureka_server_maven
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8887/eureka
+    healthcheck:
+      enabled: true    
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka:OFF
+        discovery:OFF
+        
+management:
+  security:
+    enabled: false        
+
+--- 
+spring:
+  profiles: default
+server:
+  port: 8887
